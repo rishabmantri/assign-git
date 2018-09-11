@@ -1,4 +1,25 @@
 •What is a gitignore file and what should it include for a Java project?
+
+Gitignore specifies which files to ignore while tracking all other files.
+When we create a file in repository named .gitignore, Git uses it to determine which files and directories to ignore,before you make a commit.
+.gitignore for java should include following 
+        # Compiled class file in form of *.class
+        # Log file in form of *.log
+        # BlueJ files in form of *.ctxt
+        # Mobile Tools for Java (J2ME) in form of .mtj.tmp/
+        # Package Files in form of *.jar,*.war,*.nar,*.ear,*.zip,*.tar.gz,*.rar
+        # virtual machine crash logs, in form of hs_err_pid*
+
 •What does fast-forward in Git mean?
+
+Git does a fast forward when you merge a branch that is ahead of your checked-out branch.
+For example if you create a new branch from master and make several commits, if no else is working or has committed to master in the mean while. You can perform fash forward merge which will move the pointer ahead to the latest commit.
+    
+
 •Why should you have different branches?
+
+Branches help seperate different modules so it is easy to manage the development. This also makes cloning easier as different projects may need the same module.Also development can be done around master branch without actually affecting the master branch. It is recommended that you leave your master branch clean of any but the shortest of projects. This is primarily because it provides users a clean branch to use to make minor changes without worrying about accidentally pushing out half-baked projects. It also has the added benefit of simplifying how to use git pull and git push when you have more than one           branch. 
+    
 •In a project how many remote Git repositories do you usually have?
+
+You can have as many remotes as you want, but you can only have one remote named "origin". The remote called "origin" is not special in any way, except that it is the default remote created by Git when you clone an existing repository. You can configure a second remote, push to/pull from that remote, and setup some branches to track branches from that remote instead of origin.
